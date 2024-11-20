@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>problem_solving_strings_1</title>
+</head>
+
+<body>
+    <h1>problem_solving_strings_1</h1>
+    <script>
+
+        //problem 1
+
+        function reverseString(input) {
+            let reversed = '';
+            for (let i = input.length - 1; i >= 0; i--) {
+                reversed += input[i];
+            }
+            return reversed;
+        }
+
+        let input = prompt("Enter a string to reverse:");
+        alert(reverseString(input));
+
+
+        //problem 2
+
+        function isPalindrome(input) {
+            let reversed = '';
+            for (let i = input.length - 1; i >= 0; i--) {
+                reversed += input[i];
+            }
+            return input === reversed;
+        }
+
+        let Palindrome = prompt("Enter a string to check if it is a palindrome:");
+        alert(isPalindrome(Palindrome));
+
+        //problem 3
+
+        function findLength(input) {
+            return input.length;
+        }
+
+        let strLen = prompt("Enter a string to find its length:");
+        alert(findLength(strLen));
+
+        //problem 4
+
+        function countVowelsAndConsonants(input) {
+            let vowels = 0;
+            let consonants = 0;
+            const vowelsList = 'aeiouAEIOU';
+
+            for (let i = 0; i < input.length; i++) {
+                if (vowelsList.includes(input[i])) {
+                    vowels++;
+                } else if (input[i].match(/[a-zA-Z]/)) {
+                    consonants++;
+                }
+            }
+
+            return `Vowels: ${vowels}, Consonants: ${consonants}`;
+        }
+
+        let VowelsAndConsonants = prompt("Enter a string to count vowels and consonants:");
+        alert(countVowelsAndConsonants(VowelsAndConsonants));
+
+        //problem 5
+
+        function changeCase(input) {
+            let result = '';
+            for (let i = 0; i < input.length; i++) {
+                if (input[i] === input[i].toUpperCase()) {
+                    result += input[i].toLowerCase();
+                } else {
+                    result += input[i].toUpperCase();
+                }
+            }
+            return result;
+        }
+
+        let changeCasing = prompt("Enter a string to change its case:");
+        alert(changeCase(changeCasing));
+
+
+        //problem 6
+
+        function removeWhiteSpaces(input) {
+            return input.split(' ').join('');
+        }
+
+        let white = prompt("Enter a string to remove white spaces:");
+        alert(removeWhiteSpaces(white));
+
+
+
+        //problem 7
+
+        function concatenateStrings(str1, str2) {
+            return str1 + str2;
+        }
+
+        let str1 = prompt("Enter the first string:");
+        let str2 = prompt("Enter the second string:");
+        alert(concatenateStrings(str1, str2));
+
+        //problem 8
+
+        function compareStrings(str1, str2) {
+            return str1 === str2;
+        }
+
+        let string1 = prompt("Enter the first string:");
+        let string2 = prompt("Enter the second string:");
+        alert(compareStrings(string1, string2));
+
+        //problem 9
+
+        function repeatString(input, times) {
+            let result = '';
+            for (let i = 0; i < times; i++) {
+                result += input;
+            }
+            return result;
+        }
+
+        let strinput = prompt("Enter a string to repeat:");
+        let times = prompt("Enter the number of times to repeat:");
+        alert(repeatString(strinput, times));
+
+        //problem 10
+
+        function replaceCharacter(input, oldChar, newChar) {
+            return input.split(oldChar).join(newChar);
+        }
+
+        let x = prompt("Enter a string:");
+        let oldChar = prompt("Enter the character to replace:");
+        let newChar = prompt("Enter the new character:");
+        alert(replaceCharacter(x, oldChar, newChar));
+
+
+    </script>
+</body>
+
+</html>
